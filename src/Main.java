@@ -29,30 +29,23 @@ public class Main {
 
         System.out.println("Задача 3");
         int year = 2021;
-        int a = 4;
-        int b = 100;
-        int c = 400;
-        float balanceFour = year % a;
-        float balanceOneHundred = year % b;
-        float balanceFourHundred = year % c;
-        boolean leapYear = balanceFour == 0.0 && balanceOneHundred != 0 && balanceFourHundred != 0;
-        if (leapYear) {
+        if (year % 4 == 0 && year % 100 !=0 || year % 400 == 0){
             System.out.println(year + " год является високосным");
         } else System.out.println(year + " год не является високосным");
 
         System.out.println("Задача 4");
-        int deliveryDistance = 70;
+        int deliveryDistance = 96;
         int days = 0;
         if (deliveryDistance <= 20) {
             days += 1;
         }
-        if (deliveryDistance >= 20 && deliveryDistance <= 60) {
+        else if (deliveryDistance >= 20 && deliveryDistance <= 60) {
             days += 2;
         }
-        if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+        else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
             days += 3;
         }
-        System.out.println(days);
+        System.out.println("Потребуется дней: "+days);
 
         System.out.println("Задача 5");
         int monthNumber = 12;
